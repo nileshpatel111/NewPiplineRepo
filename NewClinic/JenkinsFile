@@ -12,6 +12,11 @@ node {
      
     }
 
+    stage('show test results'){
+       junit 'target/surefire-reports/*.xml'
+     
+    }
+
    stage('archival'){
       //archiving artifacts
        archive 'targets/*.jar'
